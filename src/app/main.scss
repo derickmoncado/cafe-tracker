@@ -1,0 +1,26 @@
+// Scss partials
+@use "./partials/variables"as *;
+@use "./partials/mixins"as *;
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+
+.container {
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 20px;
+	border: 1px solid $primary-red;
+
+	.heading-test {
+		color: $primary-red;
+		font-size: 2rem;
+		margin-bottom: 20px;
+	}
+
+	.button-test {
+		@include primary-btn;
+	}
+}
