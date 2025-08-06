@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./main.scss";
+import Navigation from "./components/navigation/navigation";
 
 export const metadata: Metadata = {
 	title: "Cafe Tracker",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body>{children}</body>
+			<body>
+				<Navigation />
+				<main>{children}</main>
+			</body>
 		</html>
 	);
 }

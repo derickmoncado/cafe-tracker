@@ -1,0 +1,26 @@
+.navigation {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 1rem 2rem;
+
+    ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+
+            &:hover {
+                color: #0070f3;
+            }
+        }
+    }
+}
