@@ -6,7 +6,7 @@ export default function Navigation() {
 		<nav className={styles.navigation}>
 			<ul>
 				<li>
-					<a href="/">Home</a>
+					<a href="/">All Entries</a>
 				</li>
 				<li>
 					<a href="/coffee-shops">Coffee Shops</a>

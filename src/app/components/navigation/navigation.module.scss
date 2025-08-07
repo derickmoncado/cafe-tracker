@@ -1,10 +1,11 @@
 .navigation {
     background: #fff;
-    border-bottom: 1px solid #eee;
+    border: 1px solid blue;
     padding: 1rem 2rem;
 
     ul {
         display: flex;
+        flex-direction: column;
         gap: 2rem;
         list-style: none;
         margin: 0;
