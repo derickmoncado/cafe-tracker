@@ -1,12 +1,17 @@
 @use "./variables"as *;
 
 body {
+    background-color: #f9f9f9;
     font-family: "Poppins", Helvetica, Arial, sans-serif;
     font-weight: 300;
     border: 1px solid red;
     padding: 0;
     margin: 0;
     display: flex;
+
+    main {
+        padding: 60px 50px;
+    }
 }
 
 .container {
