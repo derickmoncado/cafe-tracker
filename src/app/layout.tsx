@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./main.scss";
-import Navigation from "./components/navigation/navigation";
+import Navigation from "../components/navigation/navigation";
 
 export const metadata: Metadata = {
 	title: "Cafe Tracker",
