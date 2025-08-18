@@ -1,6 +1,6 @@
 // Scss partials
-@use "./partials/fonts"as *;
-@use "./partials/variables"as *;
-@use "./partials/mixins"as *;
-@use "./partials/reset"as *;
-@use "./partials/globals"as *;
+@use "../styles/partials/fonts"as *;
+@use "../styles/partials/variables"as *;
+@use "../styles/partials/mixins"as *;
+@use "../styles/partials/reset"as *;
+@use "../styles/partials/globals"as *;
