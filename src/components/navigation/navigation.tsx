@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Navigation() {
 	return (
 		<nav className={styles.navigation}>
-			<div className="logo">
+			<div className={styles.logo}>
 				<Link href="/">
 					<h1>CafeTracker</h1>
 					<p>Track, rate & review your favorite spots</p>

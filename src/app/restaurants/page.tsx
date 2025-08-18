@@ -1,3 +1,3 @@
 export default function Restaurants() {
-	return <h1>Restaurants Page</h1>;
+	return <h1>Restaurants</h1>;
 }
