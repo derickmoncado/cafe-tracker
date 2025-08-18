@@ -1,24 +1,26 @@
 .navigation {
     background: #fff;
-    border: 1px solid blue;
-    padding: 60px 50px;
+    padding: 70px 60px;
 
     .logo {
-        margin-bottom: 60px;
+        margin-bottom: 50px;
 
         a {
             display: block;
 
             h1 {
-                font-size: 2rem;
-                color: red;
-                padding-bottom: 8px;
+                font-family: "Poppins-SemiBold", sans-serif;
+                font-size: 48px;
+                letter-spacing: -2px;
+                line-height: 48px;
             }
 
             p {
+                font-family: "Poppins-Medium", sans-serif;
                 font-size: 1rem;
                 color: #666;
                 margin-top: 5px;
+                letter-spacing: -1px;
             }
         }
     }

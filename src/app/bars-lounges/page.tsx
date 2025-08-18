@@ -1,3 +1,3 @@
 export default function BarsLounges() {
-	return <h1>Bars & Lounges Page</h1>;
+	return <h1>Bars & Lounges</h1>;
 }
