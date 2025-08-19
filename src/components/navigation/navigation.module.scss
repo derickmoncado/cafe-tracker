@@ -39,12 +39,12 @@
     ul {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
         list-style: none;
         margin: 0;
         padding: 0;
 
         li {
+            position: relative;
 
             a {
                 font-family: "Poppins-Medium", sans-serif;
@@ -52,10 +52,40 @@
                 font-size: 24px;
                 transition: color 0.2s;
                 letter-spacing: -1px;
+                display: inline-block;
+                padding: 20px 0;
+                color: #666;
 
                 &:hover {
-                    color: #696969;
+                    color: #000;
                 }
+
+                &.active {
+                    color: #000;
+                }
+
+                svg {
+                    margin: -4px 10px 0 0;
+                }
+            }
+        }
+
+        li:has(a.active) {
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: calc(100% - 20px);
+                top: 50%;
+                transform: translateY(-50%);
+                width: 60px;
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border-left: 40px solid transparent;
+                border-right: 40px solid #f9f9f9;
+                border-bottom: 40px solid transparent;
+                border-top: 40px solid transparent;
             }
         }
     }
