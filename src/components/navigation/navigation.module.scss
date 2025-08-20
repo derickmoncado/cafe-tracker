@@ -54,7 +54,7 @@
                 letter-spacing: -1px;
                 display: inline-block;
                 padding: 20px 0;
-                color: #666;
+                color: #808080;
 
                 &:hover {
                     color: #000;
@@ -83,9 +83,10 @@
                 width: 0;
                 height: 0;
                 border-left: 40px solid transparent;
-                border-right: 40px solid #f9f9f9;
+                border-right: 40px solid #f5f5f5;
                 border-bottom: 40px solid transparent;
                 border-top: 40px solid transparent;
+                background: linear-gradient(180deg, #1560e0 0%, #0b347a 100%);
             }
         }
     }
