@@ -34,6 +34,35 @@
             justify-content: space-between;
         }
 
+        &__profile {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 40px;
+
+            &__name-and-location {
+
+
+                .name {
+                    font-size: 18px;
+                    margin: 0;
+                    font-weight: bold;
+                }
+            }
+
+            &__photo {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                background-color: #e2e2e2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+        }
+
         &__search {
             position: relative;
 
