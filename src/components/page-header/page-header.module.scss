@@ -35,7 +35,25 @@
         }
 
         &__search {
-            border: 1px solid orange;
+            position: relative;
+
+            input {
+                width: 400px;
+                padding: 8px 12px 8px 40px;
+                border: 2px solid #e2e2e2;
+                background-color: #fff;
+                border-radius: 22px;
+                outline: none;
+            }
+
+            svg {
+                position: absolute;
+                left: 12px;
+                top: 50%;
+                transform: translateY(-50%);
+                pointer-events: none;
+                color: #888;
+            }
         }
     }
 }

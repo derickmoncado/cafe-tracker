@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./page-header.module.scss";
+import { Search } from "lucide-react";
 
 export default function PageHeader() {
 	return (
@@ -15,7 +16,10 @@ export default function PageHeader() {
 				<div className={styles["page-header__user__profile"]}>
 					user stuff here
 				</div>
-				<div className={styles["page-header__user__search"]}></div>
+				<div className={styles["page-header__user__search"]}>
+					<input type="text" placeholder="Search entries..." />
+					<Search className="search-icon" />
+				</div>
 			</div>
 		</div>
 	);
