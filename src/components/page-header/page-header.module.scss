@@ -1,5 +1,4 @@
 .page-header {
-    border: 1px solid red;
 
     @media (min-width: 768px) {
         display: flex;
@@ -7,7 +6,6 @@
     }
 
     &__title {
-        border: 1px solid blue;
 
         @media (min-width: 768px) {
             display: flex;
@@ -21,12 +19,31 @@
         }
 
         &__filters {
-            border: 1px solid green;
+            display: flex;
+            gap: 12px;
+
+            button {
+                width: 200px;
+                padding: 8px 12px;
+                border: 2px solid #e2e2e2;
+                background-color: #fff;
+                border-radius: 22px;
+                outline: none;
+                text-transform: uppercase;
+
+                &:hover {
+                    border-color: #000;
+                    cursor: pointer;
+                }
+
+                &.active {
+                    border-color: #000;
+                }
+            }
         }
     }
 
     &__user {
-        border: 1px solid purple;
 
         @media (min-width: 768px) {
             display: flex;
@@ -39,10 +56,9 @@
             justify-content: flex-end;
             align-items: center;
             gap: 25px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
 
             &__name-and-location {
-
 
                 .name {
                     font-size: 18px;
@@ -73,6 +89,10 @@
                 background-color: #fff;
                 border-radius: 22px;
                 outline: none;
+
+                &:focus {
+                    border-color: #000;
+                }
             }
 
             svg {
