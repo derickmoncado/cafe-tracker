@@ -8,9 +8,11 @@ export default function PageHeader() {
 			<div className={styles["page-header__title"]}>
 				<h2>All Entries</h2>
 				<div className={styles["page-header__title__filters"]}>
-					<button className={styles["active"]}>Visited</button>
-					<button>Want to Visit</button>
-					<button>Sheduled</button>
+					<button type="button" className={styles["active"]}>
+						Visited
+					</button>
+					<button type="button">Want to Visit</button>
+					<button type="button">Scheduled</button>
 				</div>
 			</div>
 
