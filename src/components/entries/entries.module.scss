@@ -1,0 +1,14 @@
+.entries {
+    border: 1px solid red;
+
+    summary {
+
+        &::marker {
+            order: 1;
+        }
+
+        h2 {
+            display: inline-block;
+        }
+    }
+}
