@@ -1,14 +1,48 @@
 .entries {
     border: 1px solid red;
 
-    summary {
+    details {
 
-        &::marker {
-            order: 1;
+        summary {
+
+            &::marker {
+                content: '';
+                display: none;
+            }
+
+            h2 {
+                display: inline-block;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: -28px;
+                    height: 25px;
+                    width: 25px;
+                    background: url('../../../public/chevron-down.svg') no-repeat;
+                    background-size: contain;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
         }
 
-        h2 {
-            display: inline-block;
+        &[open] {
+
+            summary {
+
+                h2 {
+
+                    &::after {
+                        transform: translateY(-50%) rotate(180deg);
+                    }
+                }
+            }
         }
     }
 }
