@@ -1,9 +1,10 @@
 .entries {
-    border: 1px solid red;
 
     details {
 
         summary {
+            padding: 15px 0 25px;
+            border-top: 2px solid #e5e5e5;
 
             &::marker {
                 content: '';
@@ -41,6 +42,30 @@
                     &::after {
                         transform: translateY(-50%) rotate(180deg);
                     }
+                }
+            }
+        }
+
+        .entry-headings {
+            display: grid;
+            grid-template-columns: 2fr 1fr 3fr 1fr 1fr;
+            gap: 10px;
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .entry-list {
+
+            .entry-item {
+                color: #000;
+                display: grid;
+                grid-template-columns: 2fr 1fr 3fr 1fr 1fr;
+                gap: 10px;
+                padding: 15px 0;
+
+                &:hover {
+                    cursor: pointer;
                 }
             }
         }
