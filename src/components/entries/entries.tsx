@@ -20,10 +20,10 @@ export default function Entries() {
 
 				<ul className={styles["entry-list"]}>
 					<li className={styles["entry-item"]}>
-						<span className={styles["name"]}>Cafe Grumpy</span>
+						<span className={styles["name"]}>Bodega Park</span>
 						<span className={styles["status"]}>Visited</span>
 						<span className={styles["address"]}>
-							193 Meserole Ave, Brooklyn, NY 11222
+							2852 W Sunset Blvd, Los Angeles, CA 90026
 						</span>
 						<span className={styles["date"]}>4/13/2015</span>
 						<span className={styles["rating"]}>
