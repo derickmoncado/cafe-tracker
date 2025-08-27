@@ -5,7 +5,7 @@ import { Star } from "lucide-react";
 export default function Entries() {
 	return (
 		<section className={styles["entries"]}>
-			<details>
+			<details open>
 				<summary>
 					<h2>Entries</h2>
 				</summary>
