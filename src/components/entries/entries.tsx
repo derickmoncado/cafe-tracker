@@ -21,7 +21,7 @@ export default function Entries() {
 				<ul className={styles["entry-list"]}>
 					<li className={styles["entry-item"]}>
 						<span className={styles["name"]}>Bodega Park</span>
-						<span className={styles["status"]}>Visited</span>
+						<span className={styles["status"]}>Favorite</span>
 						<span className={styles["address"]}>
 							2852 W Sunset Blvd, Los Angeles, CA 90026
 						</span>
