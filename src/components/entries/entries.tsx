@@ -25,7 +25,7 @@ export default function Entries() {
 						<span className={styles["address"]}>
 							2852 W Sunset Blvd, Los Angeles, CA 90026
 						</span>
-						<span className={styles["date"]}>4/13/2015</span>
+						<span className={styles["date"]}>4/15/2015</span>
 						<span className={styles["rating"]}>
 							<Star />
 							<Star />
