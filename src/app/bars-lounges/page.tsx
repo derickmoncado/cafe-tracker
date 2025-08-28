@@ -1,5 +1,5 @@
 import PageHeader from "@/components/page-header/page-header";
 
 export default function BarsLounges() {
-	return <PageHeader />;
+	return <PageHeader title={"Bars & Lounges"} />;
 }

@@ -2,11 +2,16 @@ import React from "react";
 import styles from "./page-header.module.scss";
 import { Search, User } from "lucide-react";
 
-export default function PageHeader() {
+// Page title
+type PageTitle = {
+	title: string;
+};
+
+export default function PageHeader({ title }: PageTitle) {
 	return (
 		<div className={styles["page-header"]}>
 			<div className={styles["page-header__title"]}>
-				<h2>All Entries</h2>
+				<h2>{title}</h2>
 				<div className={styles["page-header__title__filters"]}>
 					<button type="button" className={styles["active"]}>
 						Visited

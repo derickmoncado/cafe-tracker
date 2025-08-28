@@ -1,3 +1,5 @@
+import PageHeader from "@/components/page-header/page-header";
+
 export default function CoffeeShops() {
-	return <h1>Coffee Shops</h1>;
+	return <PageHeader title={"Coffee Shops"} />;
 }

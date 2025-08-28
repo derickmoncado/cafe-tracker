@@ -5,7 +5,7 @@ import Entries from "@/components/entries/entries";
 export default function Home() {
 	return (
 		<div className="container">
-			<PageHeader />
+			<PageHeader title={"All Entries"} />
 			<Entries />
 		</div>
 	);
