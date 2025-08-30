@@ -10,10 +10,6 @@
     border-radius: 40px;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
 
-    &:hover {
-        cursor: pointer;
-    }
-
     // If "Favorite"
     &.favorite {
         background: linear-gradient(90deg, rgba(255, 255, 255) 0%, rgba(196, 237, 255, 1) 100%);

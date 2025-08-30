@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./entries.module.scss";
 import Entry from "../entry/entry";
+import entries from "@/data/entries.json";
 
 export default function Entries() {
 	return (
@@ -19,7 +20,16 @@ export default function Entries() {
 				</div>
 
 				<ul className={styles["entry-list"]}>
-					<Entry name={"Bodega Park"} status={"Not Visited"} address={"123 Fake St. Silver Lake, CA 90027"} date={"4/13/2024"} rating={3} />
+					{entries.map((entry, idx) => (
+						<Entry
+							key={`${entry.name}-${entry.date}-${idx}`}
+							name={entry.name}
+							status={entry.status as "Favorite" | "Visited" | "Not Visited" | "Scheduled"}
+							address={entry.address}
+							date={entry.date}
+							rating={entry.rating}
+						/>
+					))}
 				</ul>
 			</details>
 		</section>
