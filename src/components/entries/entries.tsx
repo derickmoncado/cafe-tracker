@@ -20,9 +20,9 @@ export default function Entries() {
 				</div>
 
 				<ul className={styles["entry-list"]}>
-					{entries.map((entry, idx) => (
+					{entries.map((entry) => (
 						<Entry
-							key={`${entry.name}-${entry.date}-${idx}`}
+							key={entry.id as any}
 							name={entry.name}
 							status={entry.status as "Favorite" | "Visited" | "Not Visited" | "Scheduled"}
 							address={entry.address}

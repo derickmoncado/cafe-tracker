@@ -1,5 +1,6 @@
 [
 	{
+		"id": 1,
 		"name": "Bodega Park",
 		"status": "Not Visited",
 		"address": "123 Fake St. Silver Lake, CA 90027",
@@ -7,6 +8,7 @@
 		"rating": 0
 	},
 	{
+		"id": 2,
 		"name": "Echo Cafe",
 		"status": "Visited",
 		"address": "456 Echo Park Ave, Los Angeles, CA 90026",
@@ -14,6 +16,7 @@
 		"rating": 3
 	},
 	{
+		"id": 3,
 		"name": "Sunset Roasters",
 		"status": "Favorite",
 		"address": "789 Sunset Blvd, Los Angeles, CA 90028",
@@ -21,6 +24,7 @@
 		"rating": 5
 	},
 	{
+		"id": 4,
 		"name": "Highland Lounge",
 		"status": "Scheduled",
 		"address": "321 Highland Ave, Los Angeles, CA 90036",
@@ -28,6 +32,7 @@
 		"rating": 0
 	},
 	{
+		"id": 5,
 		"name": "Bravo Toast",
 		"status": "Not Visited",
 		"address": "321 Sunset Blvs, Los Angeles, CA 90036",
@@ -35,6 +40,7 @@
 		"rating": 0
 	},
 	{
+		"id": 6,
 		"name": "Eightfold Coffee Roasters",
 		"status": "Not Visited",
 		"address": "5001 Sunset Blvs, Los Angeles, CA 90036",
@@ -42,6 +48,7 @@
 		"rating": 0
 	},
 	{
+		"id": 7,
 		"name": "Stereoscope Coffee",
 		"status": "Not Visited",
 		"address": "3215 West Sunset Blvs, Los Angeles, CA 90036",
