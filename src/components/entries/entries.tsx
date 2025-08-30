@@ -19,7 +19,7 @@ export default function Entries() {
 				</div>
 
 				<ul className={styles["entry-list"]}>
-					<Entry />
+					<Entry name={"Bodega Park"} status={"Not Visited"} address={"123 Fake St. Silver Lake, CA 90027"} date={"4/13/2024"} rating={3} />
 				</ul>
 			</details>
 		</section>
