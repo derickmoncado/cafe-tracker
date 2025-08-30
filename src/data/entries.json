@@ -35,7 +35,7 @@
 		"id": 5,
 		"name": "Bravo Toast",
 		"status": "Not Visited",
-		"address": "321 Sunset Blvs, Los Angeles, CA 90036",
+		"address": "321 Sunset Blvd, Los Angeles, CA 90036",
 		"date": "TBD",
 		"rating": 0
 	},
@@ -43,7 +43,7 @@
 		"id": 6,
 		"name": "Eightfold Coffee Roasters",
 		"status": "Not Visited",
-		"address": "5001 Sunset Blvs, Los Angeles, CA 90036",
+		"address": "5001 Sunset Blvd, Los Angeles, CA 90036",
 		"date": "TBD",
 		"rating": 0
 	},
@@ -51,7 +51,31 @@
 		"id": 7,
 		"name": "Stereoscope Coffee",
 		"status": "Not Visited",
-		"address": "3215 West Sunset Blvs, Los Angeles, CA 90036",
+		"address": "3215 West Sunset Blvd, Los Angeles, CA 90036",
+		"date": "TBD",
+		"rating": 0
+	},
+	{
+		"id": 8,
+		"name": "Itelligencia",
+		"status": "Not Visited",
+		"address": "1234 Sunset Blvd, Los Angeles, CA 90021",
+		"date": "TBD",
+		"rating": 0
+	},
+	{
+		"id": 9,
+		"name": "La La Land",
+		"status": "Not Visited",
+		"address": "3044 Sunset Blvd, Los Angeles, CA 90036",
+		"date": "TBD",
+		"rating": 0
+	},
+	{
+		"id": 10,
+		"name": "Canyon Coffee",
+		"status": "Not Visited",
+		"address": "3215 Echo Park Way, Los Angeles, CA 90036",
 		"date": "TBD",
 		"rating": 0
 	}
