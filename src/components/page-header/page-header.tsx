@@ -16,26 +16,18 @@ export default function PageHeader({ title }: PageTitle) {
 					<button type="button" className={styles["active"]}>
 						Visited
 					</button>
-					<button type="button">Want to Visit</button>
+					<button type="button">Not Visited</button>
 					<button type="button">Scheduled</button>
 				</div>
 			</div>
 
 			<div className={styles["page-header__user"]}>
 				<div className={styles["page-header__user__profile"]}>
-					<div
-						className={
-							styles[
-								"page-header__user__profile__name-and-location"
-							]
-						}
-					>
+					<div className={styles["page-header__user__profile__name-and-location"]}>
 						<p className={styles["name"]}>Derick Moncado</p>
 						<p className={styles["location"]}>Los Angeles, CA</p>
 					</div>
-					<div
-						className={styles["page-header__user__profile__photo"]}
-					>
+					<div className={styles["page-header__user__profile__photo"]}>
 						<User />
 					</div>
 				</div>
