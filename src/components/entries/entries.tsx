@@ -1,9 +1,18 @@
+"use client";
+
 import React from "react";
 import styles from "./entries.module.scss";
 import Entry from "../entry/entry";
 import entries from "@/data/entries.json";
 
-export default function Entries() {
+type StatusFilter = "Visited" | "Not Visited" | "Scheduled";
+
+type EntriesProps = {
+	filter?: StatusFilter | null;
+};
+
+export default function Entries({ filter = null }: EntriesProps) {
+	const filteredEntries = filter ? entries.filter((e) => e.status === filter) : entries;
 	return (
 		<section className={styles["entries"]}>
 			<details open>
@@ -20,15 +29,8 @@ export default function Entries() {
 				</div>
 
 				<ul className={styles["entry-list"]}>
-					{entries.map((entry) => (
-						<Entry
-							key={entry.id as any}
-							name={entry.name}
-							status={entry.status as "Favorite" | "Visited" | "Not Visited" | "Scheduled"}
-							address={entry.address}
-							date={entry.date}
-							rating={entry.rating}
-						/>
+					{filteredEntries.map((entry) => (
+						<Entry key={entry.id as any} name={entry.name} status={entry.status as "Favorite" | "Visited" | "Not Visited" | "Scheduled"} address={entry.address} date={entry.date} rating={entry.rating} />
 					))}
 				</ul>
 			</details>
