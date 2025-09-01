@@ -3,8 +3,7 @@
 import React from "react";
 import styles from "./page-header.module.scss";
 import { Search, User } from "lucide-react";
-
-type StatusFilter = "Visited" | "Not Visited" | "Scheduled";
+import type { StatusFilter } from "@/types/status";
 
 type PageHeaderProps = {
 	title: string;

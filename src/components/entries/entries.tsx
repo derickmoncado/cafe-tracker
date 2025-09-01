@@ -4,8 +4,7 @@ import React from "react";
 import styles from "./entries.module.scss";
 import Entry from "../entry/entry";
 import entries from "@/data/entries.json";
-
-type StatusFilter = "Visited" | "Not Visited" | "Scheduled";
+import type { StatusFilter } from "@/types/status";
 
 type EntriesProps = {
 	filter?: StatusFilter | null;
