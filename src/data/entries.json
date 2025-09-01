@@ -5,15 +5,17 @@
 		"status": "Not Visited",
 		"address": "123 Fake St. Silver Lake, CA 90027",
 		"date": "TBD",
-		"rating": 0
+		"rating": 0,
+		"category": "Coffee Shop"
 	},
 	{
 		"id": 2,
-		"name": "Echo Cafe",
+		"name": "Gracias Madre",
 		"status": "Visited",
-		"address": "456 Echo Park Ave, Los Angeles, CA 90026",
+		"address": "8905 Melrose Ave, West Hollywood, CA 90069",
 		"date": "5/2/2024",
-		"rating": 3
+		"rating": 4,
+		"category": "Restaurant"
 	},
 	{
 		"id": 3,
@@ -21,15 +23,17 @@
 		"status": "Favorite",
 		"address": "789 Sunset Blvd, Los Angeles, CA 90028",
 		"date": "6/18/2024",
-		"rating": 5
+		"rating": 5,
+		"category": "Coffee Shop"
 	},
 	{
 		"id": 4,
-		"name": "Highland Lounge",
+		"name": "33 Taps",
 		"status": "Scheduled",
-		"address": "321 Highland Ave, Los Angeles, CA 90036",
+		"address": "8941 Santa Monica Blvd, West Hollywood, CA 90069",
 		"date": "9/5/2024",
-		"rating": 0
+		"rating": 0,
+		"category": "Bar"
 	},
 	{
 		"id": 5,
@@ -37,7 +41,8 @@
 		"status": "Not Visited",
 		"address": "321 Sunset Blvd, Los Angeles, CA 90036",
 		"date": "TBD",
-		"rating": 0
+		"rating": 0,
+		"category": "Coffee Shop"
 	},
 	{
 		"id": 6,
@@ -45,7 +50,8 @@
 		"status": "Not Visited",
 		"address": "5001 Sunset Blvd, Los Angeles, CA 90036",
 		"date": "TBD",
-		"rating": 0
+		"rating": 0,
+		"category": "Coffee Shop"
 	},
 	{
 		"id": 7,
@@ -53,15 +59,17 @@
 		"status": "Not Visited",
 		"address": "3215 West Sunset Blvd, Los Angeles, CA 90036",
 		"date": "TBD",
-		"rating": 0
+		"rating": 0,
+		"category": "Coffee Shop"
 	},
 	{
 		"id": 8,
-		"name": "Itelligencia",
-		"status": "Not Visited",
-		"address": "1234 Sunset Blvd, Los Angeles, CA 90021",
-		"date": "TBD",
-		"rating": 0
+		"name": "Saffy's",
+		"status": "Favorite",
+		"address": "4845 Fountain Ave, Los Angeles, CA 90029",
+		"date": "3/3/2024",
+		"rating": 5,
+		"category": "Restaurant"
 	},
 	{
 		"id": 9,
@@ -69,7 +77,8 @@
 		"status": "Not Visited",
 		"address": "3044 Sunset Blvd, Los Angeles, CA 90036",
 		"date": "TBD",
-		"rating": 0
+		"rating": 0,
+		"category": "Coffee Shop"
 	},
 	{
 		"id": 10,
@@ -77,6 +86,7 @@
 		"status": "Not Visited",
 		"address": "3215 Echo Park Way, Los Angeles, CA 90036",
 		"date": "TBD",
-		"rating": 0
+		"rating": 0,
+		"category": "Coffee Shop"
 	}
 ]
