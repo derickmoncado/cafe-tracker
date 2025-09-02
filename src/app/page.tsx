@@ -7,10 +7,17 @@ import Entries from "@/components/entries/entries";
 
 export default function Home() {
     const [filter, setFilter] = useState<StatusFilter | null>(null);
-	return (
-		<div className="container">
-			<PageHeader title={"All Entries"} activeFilter={filter} onFilterChange={setFilter} />
-			<Entries filter={filter} />
-		</div>
-	);
+    const [searchQuery, setSearchQuery] = useState<string>("");
+    return (
+        <div className="container">
+            <PageHeader
+                title={"All Entries"}
+                activeFilter={filter}
+                onFilterChange={setFilter}
+                searchQuery={searchQuery}
+                onSearchChange={setSearchQuery}
+            />
+            <Entries filter={filter} searchQuery={searchQuery} />
+        </div>
+    );
 }

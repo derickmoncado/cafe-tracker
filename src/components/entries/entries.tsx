@@ -7,13 +7,18 @@ import entries from "@/data/entries.json";
 import type { StatusFilter } from "@/types/status";
 
 type EntriesProps = {
-	filter?: StatusFilter | null;
+    filter?: StatusFilter | null;
+    searchQuery?: string;
 };
 
-export default function Entries({ filter = null }: EntriesProps) {
-	const filteredEntries = filter ? entries.filter((e) => e.status === filter) : entries;
-	return (
-		<section className={styles["entries"]}>
+export default function Entries({ filter = null, searchQuery = "" }: EntriesProps) {
+    const normalizedQuery = searchQuery.trim().toLowerCase();
+    const byStatus = filter ? entries.filter((e) => e.status === filter) : entries;
+    const filteredEntries = normalizedQuery
+        ? byStatus.filter((e) => e.name.toLowerCase().includes(normalizedQuery))
+        : byStatus;
+    return (
+        <section className={styles["entries"]}>
 			<details open>
 				<summary>
 					<h2>Entries</h2>
