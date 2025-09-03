@@ -88,5 +88,23 @@
 		"date": "TBD",
 		"rating": 0,
 		"category": "Coffee Shop"
+	},
+	{
+		"id": 11,
+		"name": "Death & Co",
+		"status": "Visited",
+		"address": "818 E 3rd St, Los Angeles, CA 90013",
+		"date": "2/15/2023",
+		"rating": 4,
+		"category": "Bar"
+	},
+	{
+		"id": 12,
+		"name": "Yamashiro Hollywood",
+		"status": "Visited",
+		"address": "1999 N Sycamore Ave, Los Angeles, CA 90068",
+		"date": "12/18/2024",
+		"rating": 5,
+		"category": "Restaurant"
 	}
 ]

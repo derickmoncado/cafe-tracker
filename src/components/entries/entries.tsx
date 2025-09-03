@@ -6,19 +6,21 @@ import Entry from "../entry/entry";
 import entries from "@/data/entries.json";
 import type { StatusFilter } from "@/types/status";
 
+type Category = "Coffee Shop" | "Restaurant" | "Bar";
+
 type EntriesProps = {
-    filter?: StatusFilter | null;
-    searchQuery?: string;
+	filter?: StatusFilter | null;
+	searchQuery?: string;
+	category?: Category | null;
 };
 
-export default function Entries({ filter = null, searchQuery = "" }: EntriesProps) {
-    const normalizedQuery = searchQuery.trim().toLowerCase();
-    const byStatus = filter ? entries.filter((e) => e.status === filter) : entries;
-    const filteredEntries = normalizedQuery
-        ? byStatus.filter((e) => e.name.toLowerCase().includes(normalizedQuery))
-        : byStatus;
-    return (
-        <section className={styles["entries"]}>
+export default function Entries({ filter = null, searchQuery = "", category = null }: EntriesProps) {
+	const normalizedQuery = searchQuery.trim().toLowerCase();
+	const byCategory = category ? entries.filter((e) => e.category === category) : entries;
+	const byStatus = filter ? byCategory.filter((e) => e.status === filter) : byCategory;
+	const filteredEntries = normalizedQuery ? byStatus.filter((e) => e.name.toLowerCase().includes(normalizedQuery)) : byStatus;
+	return (
+		<section className={styles["entries"]}>
 			<details open>
 				<summary>
 					<h2>Entries</h2>
