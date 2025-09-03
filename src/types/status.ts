@@ -1,1 +1,2 @@
-export type StatusFilter = "Visited" | "Not Visited" | "Scheduled" | "Favorite" | null;
+export type Status = "Visited" | "Not Visited" | "Scheduled" | "Favorite";
+export type StatusFilter = Status | null;

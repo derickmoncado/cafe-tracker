@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import type { StatusFilter } from "@/types/status";
+import type { StatusFilter } from "@/types";
 import PageHeader from "@/components/page-header/page-header";
 import Entries from "@/components/entries/entries";
 

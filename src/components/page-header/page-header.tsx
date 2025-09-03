@@ -3,7 +3,7 @@
 import React from "react";
 import styles from "./page-header.module.scss";
 import { Search, User, X } from "lucide-react";
-import type { StatusFilter } from "@/types/status";
+import type { StatusFilter } from "@/types";
 
 type PageHeaderProps = {
     title: string;

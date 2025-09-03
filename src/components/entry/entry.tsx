@@ -3,13 +3,14 @@
 import React from "react";
 import styles from "./entry.module.scss";
 import { Star } from "lucide-react";
+import type { Status, Rating } from "@/types";
 
 type EntryProps = {
 	name: string;
-	status: "Favorite" | "Visited" | "Not Visited" | "Scheduled";
+	status: Status;
 	address: string;
 	date: string;
-	rating: number; // 0-5
+	rating: Rating; // 0-5
 };
 
 export default function Entry({ name, status = "Not Visited", address, date, rating }: EntryProps) {

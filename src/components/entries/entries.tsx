@@ -4,19 +4,18 @@ import React from "react";
 import styles from "./entries.module.scss";
 import Entry from "../entry/entry";
 import entries from "@/data/entries.json";
-import type { StatusFilter } from "@/types/status";
-import type { Category } from "@/types/category";
-
+import type { StatusFilter, Category, Entry as EntryModel } from "@/types";
 
 type EntriesProps = {
-    filter?: StatusFilter | null;
-    searchQuery?: string;
-    category?: Category | null;
+	filter?: StatusFilter | null;
+	searchQuery?: string;
+	category?: Category | null;
 };
 
 export default function Entries({ filter = null, searchQuery = "", category = null }: EntriesProps) {
+	const data: EntryModel[] = entries;
 	const normalizedQuery = searchQuery.trim().toLowerCase();
-	const byCategory = category ? entries.filter((e) => e.category === category) : entries;
+	const byCategory = category ? data.filter((e) => e.category === category) : data;
 	const byStatus = filter ? byCategory.filter((e) => e.status === filter) : byCategory;
 	const filteredEntries = normalizedQuery ? byStatus.filter((e) => e.name.toLowerCase().includes(normalizedQuery)) : byStatus;
 	return (
@@ -36,7 +35,7 @@ export default function Entries({ filter = null, searchQuery = "", category = nu
 
 				<ul className={styles["entry-list"]}>
 					{filteredEntries.map((entry) => (
-						<Entry key={entry.id as any} name={entry.name} status={entry.status as "Favorite" | "Visited" | "Not Visited" | "Scheduled"} address={entry.address} date={entry.date} rating={entry.rating} />
+						<Entry key={entry.id} name={entry.name} status={entry.status} address={entry.address} date={entry.date} rating={entry.rating} />
 					))}
 				</ul>
 			</details>
