@@ -5,13 +5,13 @@ import styles from "./entries.module.scss";
 import Entry from "../entry/entry";
 import entries from "@/data/entries.json";
 import type { StatusFilter } from "@/types/status";
+import type { Category } from "@/types/category";
 
-type Category = "Coffee Shop" | "Restaurant" | "Bar";
 
 type EntriesProps = {
-	filter?: StatusFilter | null;
-	searchQuery?: string;
-	category?: Category | null;
+    filter?: StatusFilter | null;
+    searchQuery?: string;
+    category?: Category | null;
 };
 
 export default function Entries({ filter = null, searchQuery = "", category = null }: EntriesProps) {
