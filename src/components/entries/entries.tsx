@@ -5,6 +5,7 @@ import styles from "./entries.module.scss";
 import Entry from "../entry/entry";
 import entries from "@/data/entries.json";
 import type { StatusFilter, Category, Entry as EntryModel } from "@/types";
+import { isEntry } from "@/types/guards";
 
 type EntriesProps = {
 	filter?: StatusFilter | null;
@@ -13,7 +14,7 @@ type EntriesProps = {
 };
 
 export default function Entries({ filter = null, searchQuery = "", category = null }: EntriesProps) {
-	const data: EntryModel[] = entries;
+	const data: EntryModel[] = (entries as unknown[]).filter((e): e is EntryModel => isEntry(e));
 	const normalizedQuery = searchQuery.trim().toLowerCase();
 	const byCategory = category ? data.filter((e) => e.category === category) : data;
 	const byStatus = filter ? byCategory.filter((e) => e.status === filter) : byCategory;
