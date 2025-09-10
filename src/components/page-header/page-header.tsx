@@ -6,11 +6,11 @@ import { Search, User, X } from "lucide-react";
 import type { StatusFilter } from "@/types";
 
 type PageHeaderProps = {
-    title: string;
-    activeFilter?: StatusFilter | null;
-    onFilterChange?: (filter: StatusFilter | null) => void;
-    searchQuery?: string;
-    onSearchChange?: (value: string) => void;
+	title: string;
+	activeFilter?: StatusFilter | null;
+	onFilterChange?: (filter: StatusFilter | null) => void;
+	searchQuery?: string;
+	onSearchChange?: (value: string) => void;
 };
 
 export default function PageHeader({ title, activeFilter = null, onFilterChange, searchQuery = "", onSearchChange }: PageHeaderProps) {
@@ -47,25 +47,15 @@ export default function PageHeader({ title, activeFilter = null, onFilterChange,
 						<User />
 					</div>
 				</div>
-            <div className={styles["page-header__user__search"]}>
-                <input
-                    type="text"
-                    placeholder="Search entries..."
-                    value={searchQuery}
-                    onChange={(e) => onSearchChange?.(e.target.value)}
-                />
-                {searchQuery && (
-                    <button
-                        type="button"
-                        aria-label="Clear search"
-                        className={styles["clear-btn"]}
-                        onClick={() => onSearchChange?.("")}
-                    >
-                        <X />
-                    </button>
-                )}
-                <Search className={styles["search-icon"]} />
-            </div>
+				<div className={styles["page-header__user__search"]}>
+					<input type="text" name="Seach entries" placeholder="Search entries..." value={searchQuery} onChange={(e) => onSearchChange?.(e.target.value)} />
+					{searchQuery && (
+						<button type="button" aria-label="Clear search" className={styles["clear-btn"]} onClick={() => onSearchChange?.("")}>
+							<X />
+						</button>
+					)}
+					<Search className={styles["search-icon"]} />
+				</div>
 			</div>
 		</div>
 	);
