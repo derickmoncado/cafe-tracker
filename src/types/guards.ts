@@ -17,15 +17,14 @@ export function isRating(val: unknown): val is Rating {
 
 export function isEntry(obj: unknown): obj is Entry {
   if (typeof obj !== "object" || obj === null) return false;
-  const e = obj as Record<string, unknown>;
+  const candidate = obj as Record<string, unknown>;
   return (
-    typeof e.id === "number" &&
-    typeof e.name === "string" &&
-    isStatus(e.status) &&
-    typeof e.address === "string" &&
-    typeof e.date === "string" &&
-    isRating(e.rating) &&
-    isCategory(e.category)
+    typeof candidate.id === "number" &&
+    typeof candidate.name === "string" &&
+    isStatus(candidate.status) &&
+    typeof candidate.address === "string" &&
+    typeof candidate.date === "string" &&
+    isRating(candidate.rating) &&
+    isCategory(candidate.category)
   );
 }
-

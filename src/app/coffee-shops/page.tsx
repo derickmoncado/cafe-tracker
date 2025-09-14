@@ -12,12 +12,12 @@ export default function CoffeeShops() {
         <div className="container">
             <PageHeader
                 title={"Coffee Shops"}
-                activeFilter={filter}
-                onFilterChange={setFilter}
+                activeStatusFilter={filter}
+                onStatusFilterChange={setFilter}
                 searchQuery={searchQuery}
-                onSearchChange={setSearchQuery}
+                onSearchQueryChange={setSearchQuery}
             />
-            <Entries filter={filter} searchQuery={searchQuery} category={"Coffee Shop"} />
+            <Entries statusFilter={filter} searchQuery={searchQuery} category={"Coffee Shop"} />
         </div>
     );
 }

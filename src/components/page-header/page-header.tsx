@@ -7,17 +7,17 @@ import type { StatusFilter } from "@/types";
 
 type PageHeaderProps = {
 	title: string;
-	activeFilter?: StatusFilter | null;
-	onFilterChange?: (filter: StatusFilter | null) => void;
+	activeStatusFilter?: StatusFilter | null;
+	onStatusFilterChange?: (nextStatus: StatusFilter | null) => void;
 	searchQuery?: string;
-	onSearchChange?: (value: string) => void;
+	onSearchQueryChange?: (value: string) => void;
 };
 
-export default function PageHeader({ title, activeFilter = null, onFilterChange, searchQuery = "", onSearchChange }: PageHeaderProps) {
-	const handleClick = (filter: StatusFilter) => {
-		if (!onFilterChange) return;
-		// Toggle off if clicking the active filter
-		onFilterChange(activeFilter === filter ? null : filter);
+export default function PageHeader({ title, activeStatusFilter = null, onStatusFilterChange, searchQuery = "", onSearchQueryChange }: PageHeaderProps) {
+	const handleStatusFilterClick = (clickedStatus: StatusFilter) => {
+		if (!onStatusFilterChange) return;
+		// Toggle off if clicking the active status filter
+		onStatusFilterChange(activeStatusFilter === clickedStatus ? null : clickedStatus);
 	};
 
 	return (
@@ -25,13 +25,13 @@ export default function PageHeader({ title, activeFilter = null, onFilterChange,
 			<div className={styles["page-header__title"]}>
 				<h2>{title}</h2>
 				<div className={styles["page-header__title__filters"]}>
-					<button type="button" className={activeFilter === "Visited" ? styles["active"] : undefined} onClick={() => handleClick("Visited")}>
+					<button type="button" className={activeStatusFilter === "Visited" ? styles["active"] : undefined} onClick={() => handleStatusFilterClick("Visited")}>
 						Visited
 					</button>
-					<button type="button" className={activeFilter === "Not Visited" ? styles["active"] : undefined} onClick={() => handleClick("Not Visited")}>
+					<button type="button" className={activeStatusFilter === "Not Visited" ? styles["active"] : undefined} onClick={() => handleStatusFilterClick("Not Visited")}>
 						Not Visited
 					</button>
-					<button type="button" className={activeFilter === "Scheduled" ? styles["active"] : undefined} onClick={() => handleClick("Scheduled")}>
+					<button type="button" className={activeStatusFilter === "Scheduled" ? styles["active"] : undefined} onClick={() => handleStatusFilterClick("Scheduled")}>
 						Scheduled
 					</button>
 				</div>
@@ -48,9 +48,9 @@ export default function PageHeader({ title, activeFilter = null, onFilterChange,
 					</div>
 				</div>
 				<div className={styles["page-header__user__search"]}>
-					<input type="text" name="Seach entries" placeholder="Search entries..." value={searchQuery} onChange={(e) => onSearchChange?.(e.target.value)} />
+					<input type="text" name="Search entries" placeholder="Search entries..." value={searchQuery} onChange={(e) => onSearchQueryChange?.(e.target.value)} />
 					{searchQuery && (
-						<button type="button" aria-label="Clear search" className={styles["clear-btn"]} onClick={() => onSearchChange?.("")}>
+						<button type="button" aria-label="Clear search" className={styles["clear-btn"]} onClick={() => onSearchQueryChange?.("")}>
 							<X />
 						</button>
 					)}

@@ -12,12 +12,12 @@ export default function BarsLounges() {
         <div className="container">
             <PageHeader
                 title={"Bars & Lounges"}
-                activeFilter={filter}
-                onFilterChange={setFilter}
+                activeStatusFilter={filter}
+                onStatusFilterChange={setFilter}
                 searchQuery={searchQuery}
-                onSearchChange={setSearchQuery}
+                onSearchQueryChange={setSearchQuery}
             />
-            <Entries filter={filter} searchQuery={searchQuery} category={"Bar"} />
+            <Entries statusFilter={filter} searchQuery={searchQuery} category={"Bar"} />
         </div>
     );
 }

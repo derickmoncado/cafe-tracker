@@ -7,7 +7,8 @@ import { usePathname } from "next/navigation";
 import { Coffee, Martini, Rows4, Utensils } from "lucide-react";
 
 export default function Navigation() {
-	const pathname = usePathname();
+	const currentPath = usePathname();
+	const getActiveClass = (path: string) => (currentPath === path ? styles.active : undefined);
 
 	return (
 		<nav className={styles.navigation}>
@@ -19,46 +20,22 @@ export default function Navigation() {
 			</div>
 			<ul>
 				<li>
-					<Link
-						href="/"
-						className={pathname === "/" ? styles.active : undefined}
-					>
+					<Link href="/" className={getActiveClass("/")}>
 						<Rows4 /> All Entries
 					</Link>
 				</li>
 				<li>
-					<Link
-						href="/coffee-shops"
-						className={
-							pathname === "/coffee-shops"
-								? styles.active
-								: undefined
-						}
-					>
+					<Link href="/coffee-shops" className={getActiveClass("/coffee-shops")}>
 						<Coffee /> Coffee Shops
 					</Link>
 				</li>
 				<li>
-					<Link
-						href="/bars-lounges"
-						className={
-							pathname === "/bars-lounges"
-								? styles.active
-								: undefined
-						}
-					>
+					<Link href="/bars-lounges" className={getActiveClass("/bars-lounges")}>
 						<Martini /> Bars & Lounges
 					</Link>
 				</li>
 				<li>
-					<Link
-						href="/restaurants"
-						className={
-							pathname === "/restaurants"
-								? styles.active
-								: undefined
-						}
-					>
+					<Link href="/restaurants" className={getActiveClass("/restaurants")}>
 						<Utensils /> Restaurants
 					</Link>
 				</li>

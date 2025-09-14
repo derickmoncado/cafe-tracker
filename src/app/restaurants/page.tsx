@@ -12,12 +12,12 @@ export default function Restaurants() {
         <div className="container">
             <PageHeader
                 title={"Restaurants"}
-                activeFilter={filter}
-                onFilterChange={setFilter}
+                activeStatusFilter={filter}
+                onStatusFilterChange={setFilter}
                 searchQuery={searchQuery}
-                onSearchChange={setSearchQuery}
+                onSearchQueryChange={setSearchQuery}
             />
-            <Entries filter={filter} searchQuery={searchQuery} category={"Restaurant"} />
+            <Entries statusFilter={filter} searchQuery={searchQuery} category={"Restaurant"} />
         </div>
     );
 }

@@ -12,12 +12,12 @@ export default function Home() {
         <div className="container">
             <PageHeader
                 title={"All Entries"}
-                activeFilter={filter}
-                onFilterChange={setFilter}
+                activeStatusFilter={filter}
+                onStatusFilterChange={setFilter}
                 searchQuery={searchQuery}
-                onSearchChange={setSearchQuery}
+                onSearchQueryChange={setSearchQuery}
             />
-            <Entries filter={filter} searchQuery={searchQuery} />
+            <Entries statusFilter={filter} searchQuery={searchQuery} />
         </div>
     );
 }
